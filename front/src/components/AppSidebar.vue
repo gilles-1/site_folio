@@ -12,19 +12,22 @@
 </p>
   </div>
 
-  <div class="card-body">
+  <div class="card-body bg-dark bg-opacity-10" style="text-align: center;">
     <!-- Informations personnelles dans le corps -->
-    <h5 class="card-title">Nom Prénom</h5>
-    <p class="card-text">Poste / Profession</p>
-    <p class="card-text">Description personnelle ou professionnelle.</p>
+    <h5 class="card-title">Gilles Ngangue</h5>
+    <p class="card-title">Analyste informatique</p>
+    <p class="card-title">Montreal (Canada)</p>
+    <p class="card-title">ngangueg@gmail.com</p>
+    <p class="card-title">Tel : +1 873 660 1968</p>
+    
   </div>
 
-  <div class="card-footer">
+  <div class="card-footer" style="text-align: center;">
     <!-- Liens d'icônes vers les réseaux sociaux et LinkedIn -->
-    <a href="#" class="btn btn-outline-primary"><i class="fab fa-facebook"></i></a>
-    <a href="#" class="btn btn-outline-secondary"><i class="fab fa-twitter"></i></a>
-    <a href="#" class="btn btn-outline-info"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.linkedin.com/in/votreprofil" class="btn btn-outline-dark" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="#" class="btn btn-outline-primary m-1"><i class="fab fa-facebook"></i></a>
+    <a href="#" class="btn btn-outline-secondary m-1"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="btn btn-outline-info m-1"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/giltrand" class="btn btn-outline-dark m-1" target="_blank"><i class="fab fa-linkedin"></i></a>
   </div>
 </div>
 
