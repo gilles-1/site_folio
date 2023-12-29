@@ -1,9 +1,9 @@
 <template>
-  <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light">
+  <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light" >
       
       <div class="container">
         <a class="navbar-brand text-uppercase fw-bold" href="#">
-          <span class="bg-primary bg-gradient p-1 rounded-3 text-light">Ngan</span> gue
+          <span class="bg-dark bg-gradient p-1 rounded-3 text-light">Ngan</span> gue
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,7 +13,7 @@
           <ul class="navbar-nav">
                 <!-- Liens de navigation -->
         <slot></slot>
-        
+
       </ul>
         </div>
       </div>
@@ -30,7 +30,7 @@
   </script>
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
-  <style scoped>
+  <style>
   
   </style>
   

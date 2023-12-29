@@ -1,5 +1,11 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="card">
+  <div class="card-header">
+      <p>Mes informations</p>
   </div>
+
+  <div class="card-body">
+      <p>Mon nom est Gilles Bertrand Tchako Ngangue</p>
+  </div>
+</div>
 </template>
