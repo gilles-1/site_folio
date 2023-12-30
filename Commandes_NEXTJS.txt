@@ -1,5 +1,6 @@
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypassnpx create-next-app
 env\Scripts\activate
+python manage.py runserver
 npm install bootstrap
 npm install -g @vue/cli
 vue create front
@@ -33,6 +34,8 @@ pip freeze > requirements.txt
 django-admin startproject merchex
 python manage.py runserver
 python manage.py migrate
+
+python -m pip install Pillow
 
 (env) ~/projects/django-web-app/merchex
 python manage.py startapp listings
@@ -98,3 +101,23 @@ https://www.favicon-generator.org/
 https://www.flaticon.com/
 
 https://vue-native.io/docs/installation.html
+
+https://fontawesome.com/
+
+<font-awesome-icon icon="java" />
+
+<font-awesome-icon icon="fa-solid fa-file-pdf" />
+<font-awesome-icon icon="file-pdf" />
+
+<font-awesome-icon :icon="['fas', 'file-code']" />
+<font-awesome-icon :icon="['fas', 'network-wired']" />
+<font-awesome-icon :icon="['fas', 'location-dot']" />
+
+<font-awesome-icon :icon="['fas', 'cloud-arrow-up']" />
+
+<font-awesome-icon :icon="['fas', 'file-pdf']" />
+
+<font-awesome-icon icon="screwdriver-wrench" />
+
+<font-awesome-icon icon="earth-americas" />
+<font-awesome-icon icon="car" />
