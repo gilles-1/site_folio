@@ -1,0 +1,100 @@
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypassnpx create-next-app
+env\Scripts\activate
+npm install bootstrap
+npm install -g @vue/cli
+vue create front
+vue add router
+npm install bootstrap popper.js
+npm install --save @fortawesome/fontawesome-free
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+git init
+git add index.html
+git status
+git commit -m "Ajout de fichier"
+ git remote add fo https://github.com/gilles-1/folio.git
+ git remote add tng https://github.com/gilles-1/site_folio.git
+ git push -u tng main
+ 
+~/projects/django-web-app
+→ python -m venv env
+~/projects/django-web-app
+→ ls
+env
+
+git add .gitignore
+git commit -m "Ajouter le fichier .gitignore"
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+env\Scripts\activate
+pip install django
+pip freeze > requirements.txt
+django-admin startproject merchex
+python manage.py runserver
+python manage.py migrate
+
+(env) ~/projects/django-web-app/merchex
+python manage.py startapp listings
+
+https://fr.vuejs.org/
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+ 
+ https://react-bootstrap.github.io/docs/getting-started/introduction
+ npm install react-bootstrap bootstrap
+ import Button from 'react-bootstrap/Button';
+ 
+ npm i --save bootstrap jquery popper.js
+ https://stackoverflow.com/questions/50980046/bootstrap-dropdown-not-working-in-react
+ 
+ import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
+import $ from 'jquery';
+import Popper from 'popper.js';
+
+https://stackoverflow.com/questions/40037657/how-to-include-bootstrap-css-and-js-in-reactjs-app
+
+https://blog.logrocket.com/using-bootstrap-react-tutorial-examples/
+
+https://tailwindui.com/components/application-ui/navigation/navbars
+
+https://tailwindcss.com/docs/installation
+
+https://www.freecodecamp.org/news/how-to-build-a-portfolio-site-with-nextjs-tailwindcss/
+
+https://www.udemy.com/course/tailwindcss-2-par-la-pratique/
+
+https://www.udemy.com/course/tailwindcss-2-par-la-pratique/learn/lecture/25435016?components=add_to_cart%2Cbase_purchase_section%2Cbuy_button%2Ccacheable_buy_button%2Cdeal_badge%2Cdiscount_expiration%2Cgift_this_course%2Clifetime_access_context%2Cprice_text%2Cpurchase%2Cpurchase_tabs_context%2Crecommendation%2Credeem_coupon#overview
+
+Outils gratuit pour connaitre la base de donnée qu'un site web
+ChatGPT
+Il est important de souligner que l'accès non autorisé à la base de données d'un site web, même en utilisant des outils gratuits, peut être illégal et contraire à l'éthique. L'accès à une base de données sans l'autorisation explicite du propriétaire du site peut violer les lois sur la protection des données et la confidentialité.
+
+Si vous avez des raisons légitimes de connaître la base de données d'un site web, je vous recommande de contacter le propriétaire du site ou le service d'assistance technique pour obtenir les informations dont vous avez besoin. L'utilisation d'outils d'analyse ou de reconnaissance sur un site web sans autorisation appropriée peut entraîner des conséquences légales.
+
+Cependant, pour des activités légales et éthiques liées au développement web et à la gestion de bases de données, voici quelques outils qui peuvent vous aider à obtenir des informations sur la technologie utilisée par un site web sans accéder à sa base de données :
+
+Wappalyzer : C'est une extension de navigateur qui peut vous donner des informations sur les technologies utilisées par un site web, y compris la base de données.
+
+BuiltWith : Un service en ligne qui fournit des informations sur la technologie utilisée par un site web, y compris les bases de données.
+
+WhatRuns : Une autre extension de navigateur qui identifie les technologies utilisées sur un site web, y compris les bases de données.
+
+Ces outils se concentrent généralement sur l'analyse des technologies côté client et ne fournissent pas d'informations détaillées sur la base de données elle-même. Encore une fois, l'utilisation de ces outils doit être conforme aux lois et aux éthiques en matière de sécurité informatique. Il est fortement recommandé d'obtenir une autorisation explicite avant de tenter de recueillir des informations sur la technologie utilisée par un site web.
+
+
+https://www.tresfacile.net/upload-des-fichiers-dans-django/
+
+https://router.vuejs.org/installation.html
+
+https://fr.vuejs.org/
+
+https://demos.creative-tim.com/vue-light-bootstrap-dashboard/?_ga=2.40507682.1015978642.1703663864-288715651.1703663864#/admin/user
+
+https://demos.creative-tim.com/vue-light-bootstrap-dashboard/?_ga=2.40507682.1015978642.1703663864-288715651.1703663864#/admin/user
+
+https://www.favicon-generator.org/
+https://www.flaticon.com/
+
+https://vue-native.io/docs/installation.html
