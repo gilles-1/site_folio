@@ -2,6 +2,7 @@ from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.contrib.auth.models import User
 
+
 # Create your models here.
 class UserProfile(models.Model):
     name = models.fields.CharField(max_length=200)
@@ -17,9 +18,6 @@ class UserProfile(models.Model):
     def __str__(self):
         return f'{self.name}'
 
-    
-
-
 class Formation(models.Model):
     class Typ(models.TextChoices):
         Formation = 'Formation'
@@ -27,8 +25,8 @@ class Formation(models.Model):
 
     typ = models.fields.CharField(choices=Typ.choices, max_length=25)
 
-    name = models.fields.CharField(max_length=200)
-    institution = models.fields.CharField(max_length=50)
+    name = models.fields.CharField(max_length=300)
+    institution = models.fields.CharField(max_length=200)
     city = models.fields.CharField(max_length=50)
     country = models.fields.CharField(max_length=50)
     started_at = models.fields.DateField()
@@ -55,13 +53,14 @@ class Experience(models.Model):
 
     class Typ(models.TextChoices):
         Emploi = 'Emploi'
+        Travail = 'Travail'
         Stage = 'Stage'
         Projet = 'Projet'
         Implication = 'Implication'
 
     typ = models.fields.CharField(choices=Typ.choices, max_length=25)
 
-    title = models.fields.CharField(max_length=200)
+    title = models.fields.CharField(max_length=300)
     institution = models.fields.CharField(max_length=50)
     city = models.fields.CharField(max_length=50)
     country = models.fields.CharField(max_length=50)
@@ -72,7 +71,7 @@ class Experience(models.Model):
 
 class Task(models.Model):
 
-    description = models.fields.CharField(max_length=200)
+    description = models.fields.CharField(max_length=400)
     technology = models.fields.CharField(max_length=55, blank=True, null=True)
     experience = models.ForeignKey(Experience, null=True, on_delete=models.SET_NULL)
     def __str__(self):

@@ -15,10 +15,24 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from rest_framework import routers
 from folio import views
+
+from folio.views import SkillViewset, ItemViewset
+
+# Ici nous créons notre routeur
+router = routers.SimpleRouter()
+# Puis lui déclarons une url basée sur le mot clé ‘category’ et notre view
+# afin que l’url générée soit celle que nous souhaitons ‘/api/category/’
+router.register('skill', SkillViewset, basename='skill')
+router.register('item', ItemViewset, basename='item')
+ 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index)
+    path('api-auth/', include('rest_framework.urls')),
+    path('api/', include(router.urls)),
+    #path('sil', SkillWithItemListView.as_view(), name='sil'),
+    path('', views.index),
 ]

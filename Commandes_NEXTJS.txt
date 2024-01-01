@@ -23,6 +23,9 @@ git commit -m "Ajout de fichier"
 ~/projects/django-web-app
 → ls
 env
+pip install djangorestframework
+pip install markdown       # Markdown support for the browsable API.
+pip install django-filter  # Filtering support
 
 git add .gitignore
 git commit -m "Ajouter le fichier .gitignore"

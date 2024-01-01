@@ -9,7 +9,7 @@ from folio.models import Experience
 from folio.models import Task
 from folio.models import Formation
 
-
+admin.site.site_header = 'Espace d\'administration NGANGUE'
 
 admin.site.register(UserProfile)
 admin.site.register(Skill)
