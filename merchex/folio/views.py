@@ -34,3 +34,58 @@ class SkillViewset(ReadOnlyModelViewSet):
         queryset = Skill.objects.all()
         return queryset
     
+class ExperienceViewset(ReadOnlyModelViewSet):
+ 
+    serializer_class = ExperienceSerializer
+ 
+    def get_queryset(self):
+        queryset = Experience.objects.all()
+        return queryset
+    
+class ProjetViewset(ReadOnlyModelViewSet):
+ 
+    serializer_class = ExperienceSerializer
+ 
+    def get_queryset(self):
+        queryset = Experience.objects.all()
+        return queryset
+    
+class StageViewset(ReadOnlyModelViewSet):
+ 
+    serializer_class = ExperienceSerializer
+ 
+    def get_queryset(self):
+        queryset = Experience.objects.all()
+        return queryset
+    
+class ImplicationViewset(ReadOnlyModelViewSet):
+ 
+    serializer_class = ExperienceSerializer
+ 
+    def get_queryset(self):
+        queryset = Experience.objects.all()
+        return queryset
+    
+class FormationViewset(ReadOnlyModelViewSet):
+ 
+    serializer_class = FormationSerializer
+ 
+    def get_queryset(self):
+        queryset = Formation.objects.all()
+        return queryset
+    
+class TaskViewset(ReadOnlyModelViewSet):
+ 
+    serializer_class = TaskSerializer
+ 
+    def get_queryset(self):
+        queryset = Task.objects.all()
+        return queryset
+    
+class UserProfileViewset(ReadOnlyModelViewSet):
+ 
+    serializer_class = UserProfileSerializer
+ 
+    def get_queryset(self):
+        queryset = UserProfile.objects.all()
+        return queryset

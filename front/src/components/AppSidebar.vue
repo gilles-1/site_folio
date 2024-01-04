@@ -12,15 +12,7 @@
 </p>
   </div>
 
-  <div class="card-body bg-dark bg-opacity-10" style="text-align: center;">
-    <!-- Informations personnelles dans le corps -->
-    <h5 class="card-title">Gilles Ngangue</h5>
-    <p class="card-title">Analyste informatique</p>
-    <p class="card-title">Montreal (Canada)</p>
-    <p class="card-title">ngangueg@gmail.com</p>
-    <p class="card-title">Tel : +1 873 660 1968</p>
-    
-  </div>
+  <InfoCom/>
 
   <div class="card-footer" style="text-align: center;">
     <!-- Liens d'icônes vers les réseaux sociaux et LinkedIn -->
@@ -35,25 +27,19 @@
     </template>
     
     <script>
+import InfoCom from './InfoCom.vue';
+
     export default {
-
-        data() {
-    return {
-      // Définir le chemin de l'image en fonction de l'emplacement dans votre projet
-      imagePath: require('@/assets/noir.png'),
-      name: 'AppSidebar', // Définir le nom par défaut
-    };
-  }
-      
-      
-      
-
-      
-      
-    }
+    data() {
+        return {
+            // Définir le chemin de l'image en fonction de l'emplacement dans votre projet
+            imagePath: require('@/assets/noir.png'),
+            name: 'AppSidebar', // Définir le nom par défaut
+        };
+    },
+    components: { InfoCom }
+}
     </script>
-
-    
 
     
     <!-- Add "scoped" attribute to limit CSS to this component only -->

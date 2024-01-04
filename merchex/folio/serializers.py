@@ -14,10 +14,13 @@ class SkillSerializer(ModelSerializer):
         model = Skill
         fields = '__all__'
 
-
+class TaskSerializer(ModelSerializer):
+    class Meta:
+        model = Task
+        fields = '__all__'
 
 class ExperienceSerializer(ModelSerializer):
- 
+    task_set = TaskSerializer(many=True, read_only=True)
     class Meta:
         model = Experience
         fields = '__all__'
@@ -26,12 +29,6 @@ class FormationSerializer(ModelSerializer):
  
     class Meta:
         model = Formation
-        fields = '__all__'
-
-class TaskSerializer(ModelSerializer):
- 
-    class Meta:
-        model = Task
         fields = '__all__'
 
 class UserProfileSerializer(ModelSerializer):

@@ -19,7 +19,7 @@ from django.urls import path, include
 from rest_framework import routers
 from folio import views
 
-from folio.views import SkillViewset, ItemViewset
+from folio.views import SkillViewset, ItemViewset, ExperienceViewset, FormationViewset, TaskViewset, UserProfileViewset
 
 # Ici nous créons notre routeur
 router = routers.SimpleRouter()
@@ -27,6 +27,10 @@ router = routers.SimpleRouter()
 # afin que l’url générée soit celle que nous souhaitons ‘/api/category/’
 router.register('skill', SkillViewset, basename='skill')
 router.register('item', ItemViewset, basename='item')
+router.register('experience', ExperienceViewset, basename='experience')
+router.register('formation', FormationViewset, basename='formation')
+router.register('task', TaskViewset, basename='task')
+router.register('info', UserProfileViewset, basename='info')
  
 
 urlpatterns = [

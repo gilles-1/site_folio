@@ -9,7 +9,22 @@
         <router-link to="/" class="nav-link" active>Home</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/" class="nav-link">Experience</router-link>
+          <router-link to="/" class="nav-link">Competence</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/experience" class="nav-link">Experience</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/formation" class="nav-link">Formation</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/projet" class="nav-link">Projet</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/certification" class="nav-link">Certification</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/implication" class="nav-link">Implication</router-link>
         </li>
         <li class="nav-item">
           <router-link to="/about" class="nav-link">About</router-link>

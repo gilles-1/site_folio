@@ -10,9 +10,7 @@
 
   <div class="card-body bg-dark bg-opacity-10" >
     <SkillCom/>
-  </div>
- 
-    
+  </div> 
   </div>
 
 </template>
