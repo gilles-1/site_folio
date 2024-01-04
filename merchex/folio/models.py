@@ -7,7 +7,8 @@ from django.contrib.auth.models import User
 class UserProfile(models.Model):
     name = models.fields.CharField(max_length=200)
     title = models.fields.CharField(max_length=200)
-    about = models.fields.CharField(max_length=200)
+    about = models.fields.CharField(max_length=500)
+    email = models.EmailField(unique=True)
     telephone = models.fields.CharField(max_length=200)
     city = models.fields.CharField(max_length=200)
     country = models.fields.CharField(max_length=200)

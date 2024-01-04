@@ -1,15 +1,17 @@
 <template>
   <div class="row">
-  <div v-for="skill in data" :key="skill.id" class="card mb-2 mx-1" style="max-width: 400px;">
+  <div v-for="skill in data" :key="skill.id" class="card mb-1 mx-1" style="max-width: 400px;">
           <div class="row no-gutters">
               <!-- Icône FontAwesome -->
-              <div class="col-md-2">
-                  <i class="fas fa-cloud fa-3x"></i>
+              <div class="col-md-2 mt-2">
+                  <i :class="skill.font_awesome"></i>
               </div>
               <div class="col-md-10">
                   <div class="card-body">
                       <h5 class="card-title">{{ skill.name }}</h5>
-                      <p class="card-text">Contenu de la Card. Vous pouvez</p>
+                      <ul class="list-inline" v-for="item in skill.item_set" :key="item.id">
+                        <li class="list-inline-item">{{ item.name }}</li>
+                      </ul>
                   </div>
               </div>
           </div>

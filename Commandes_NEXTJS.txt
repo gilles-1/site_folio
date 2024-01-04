@@ -127,3 +127,27 @@ https://fontawesome.com/
 
 <font-awesome-icon icon="earth-americas" />
 <font-awesome-icon icon="car" />
+
+
+
+fas fa-cloud fa-3x
+https://fontawesome.com/v4/icons/
+fas fa-code fa-3x
+
+fas fa-map-marker fa-3x
+fas fa-cog fa-3x
+fas fa-map-marker fa-3x
+fas fa-cog fa-3x
+fas fa-window-restore fa-3x
+fas fa-car fa-3x
+fas fa-globe fa-3x
+fas fa-tower-broadcast fa-3x
+fas fa-feed fa-3x
+
+<i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+
+<i class="fa-solid fa-tower-broadcast"></i>
+
+<i class="fa fa-info-circle" aria-hidden="true"></i>
+
+https://fontawesome.com/v4/icon/info-circle

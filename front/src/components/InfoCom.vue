@@ -1,13 +1,16 @@
 <template>
-    <div class="card-body bg-dark bg-opacity-10" style="text-align: center;">
+    <div>
+    <div v-for="item in data" :key="item.id" class="card-body bg-dark bg-opacity-10" style="text-align: center;">
     <!-- Informations personnelles dans le corps -->
-    <h5 class="card-title">Gilles Ngangue</h5>
-    <p class="card-title">Analyste informatique</p>
-    <p class="card-title">Montreal (Canada)</p>
-    <p class="card-title">ngangueg@gmail.com</p>
-    <p class="card-title">Tel : +1 873 660 1968</p>
+    <h5 class="card-title">{{ item.name }}</h5>
+    <p class="card-title">{{ item.title }}</p>
+    <p class="card-title">{{ item.city }} ({{ item.country }})</p>
+    <p class="card-title">{{ item.email }}</p>
+    <p class="card-title">Tel : {{ item.telephone }}</p>
     
   </div>
+
+</div>
   </template>
   
   <script>
