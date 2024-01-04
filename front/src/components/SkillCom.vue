@@ -9,8 +9,10 @@
               <div class="col-md-10">
                   <div class="card-body">
                       <h5 class="card-title">{{ skill.name }}</h5>
-                      <ul class="list-inline" v-for="item in skill.item_set" :key="item.id">
-                        <li class="list-inline-item">{{ item.name }}</li>
+                      <ul class="list-inline custom-list" >
+                      <li class="list-inline-item" v-for="item in skill.item_set" :key="item.id">
+                        {{ item.name }}
+                      </li>
                       </ul>
                   </div>
               </div>
@@ -20,14 +22,14 @@
 </template>
 
 <script>
+
 import axios from 'axios';
+
 export default {
   name: 'SkillCom',
-
-
   data() {
   return {
-    data: [],
+    data: [], isHovered: false,
   };
 },
 mounted() {
@@ -42,13 +44,25 @@ methods: {
       .catch(error => {
         console.error('Erreur lors de la requête API', error);
       });
-  }
-}
+  },
+
+},
+
 
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+/* Supprimer les puces par défaut et ajouter des puces personnalisées */
+.custom-list {
+  list-style: none;
+}
 
+.custom-list li::before {
+  content: "\2022"; /* Utilisation du caractère de puce (bullet) Unicode */
+  color: #3d556e; /* Couleur de la puce */
+  font-size: 1.5em; /* Taille de la puce */
+  margin-right: 0em; /* Espacement entre la puce et le texte */
+}
 </style>
