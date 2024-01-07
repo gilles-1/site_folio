@@ -7,16 +7,20 @@
   <div class="card-body bg-dark bg-opacity-10" >
 
     <div class="row">
-    <div v-for="exp in data" :key="exp.id" class="card mb-2 mx-1" style="max-width: 400px;">
+    <div v-for="exp in data" :key="exp.id" class="card mb-2 mx-1" style="max-width: 815px;">
             <div class="row no-gutters">
                 <!-- Icône FontAwesome -->
-                <div class="col-md-2">
-                    <i class="fas fa-cloud fa-3x"></i>
-                </div>
-                <div class="col-md-10">
+                <div class="col-md-12">
                     <div class="card-body">
-                        <h5 class="card-title">{{ exp.name }}</h5>
-                        <p class="card-text">Contenu de la Card. Vous pouvez</p>
+                      <div class="col-md-12">
+                        <h5 class="card-title">{{ exp.title }}</h5>
+                      </div>
+                        
+                      <ul class="" >
+                      <li class="" v-for="item in exp.task_set" :key="item.id">
+                        {{ item.description }}
+                      </li>
+                      </ul>
                     </div>
                 </div>
             </div>

@@ -5,9 +5,6 @@
 
     <AppHeader>
     
-      <li class="nav-item">
-        <router-link to="/" class="nav-link" active>Home</router-link>
-        </li>
         <li class="nav-item">
           <router-link to="/" class="nav-link">Competence</router-link>
         </li>
@@ -28,6 +25,11 @@
         </li>
         <li class="nav-item">
           <router-link to="/about" class="nav-link">About</router-link>
+        </li>
+        <li class="nav-item">
+          
+          <router-link to="/about" class="nav-link"></router-link>
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
         </li>
   </AppHeader>
 </div>

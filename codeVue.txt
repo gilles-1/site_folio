@@ -1,7 +1,7 @@
 <template>
   <div class="row">
   <div v-for="skill in data" :key="skill.id" class="card mb-1 mx-1" style="max-width: 400px;">
-          <div class="row no-gutters">
+          <div :class="{ 'bg-primary bg-opacity-10 row no-gutters': isHovered }" @mouseover="setHover(true)" @mouseout="setHover(false)">
               <!-- Icône FontAwesome -->
               <div class="col-md-2 mt-2" >
                   <i :class="skill.font_awesome"></i>
@@ -45,6 +45,10 @@ methods: {
         console.error('Erreur lors de la requête API', error);
       });
   },
+
+  setHover(value) {
+      this.isHovered = value;
+    },
 
 },
 
