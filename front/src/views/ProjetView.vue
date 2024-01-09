@@ -1,64 +1,114 @@
 <template>
-    <div class="card">
-    <div class="card-header">
-      <p>Projet</p>
-  </div>
-
-  <div class="card-body bg-dark bg-opacity-10" >
-
-    <div class="row">
-    <div v-for="exp in data" :key="exp.id" class="card mb-2 mx-1" style="max-width: 400px;">
-            <div class="row no-gutters">
-                <!-- Icône FontAwesome -->
-                <div class="col-md-2">
-                    <i class="fas fa-cloud fa-3x"></i>
-                </div>
-                <div class="col-md-10">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ exp.name }}</h5>
-                        <p class="card-text">Contenu de la Card. Vous pouvez</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-
-      </div> 
-  </div>
-
-  </template>
+  <div class="card">
+      <div class="card-header">
+        <p>Projets</p>
+    </div>
   
-  <script>
-  import axios from 'axios';
-  export default {
-    name: 'ProjetView',
+    <div class="card-body bg-dark bg-opacity-10" >
+  
+      <div class="row">
+      <div v-for="exp in filteredData" :key="exp.id"  class="card mb-2 mx-1" style="max-width: 815px;">
+            
+        <div  class="row no-gutters">
+                  <!-- Icône FontAwesome -->
+                  <div class="col-md-12">
+                      <div class="card-body">
+                        <div class="col-md-12">
+                          <h6 class="card-title">{{ exp.title }}</h6>
+                        </div>
+                        <div class="row">
+  
+                          <div class="col-md-10">
+                          <h7 class="">{{ exp.institution }} ({{ exp.city }}, {{ exp.country }})</h7>
+                        </div>
+                        <div class="col-md-2">
+                          <h7 class="">{{ getYear(exp.started_at) }} - {{ getYear(exp.ended_at) }}</h7>
+                        </div>
+    
+                        </div>
+                          
+                        <ul class="" >
+                        <li class="" v-for="item in exp.task_set" :key="item.id">
+                          {{ item.description }}
+                        </li>
+                        </ul>
+                      </div>
+                  </div>
+              </div>
+  
+              
+  
+              
+            
   
   
-    data() {
-    return {
-      data: [],
-    };
+  
+          </div>
+  
+          </div>
+  
+        </div> 
+    </div>
+  
+    </template>
+    
+    <script>
+    import axios from 'axios';
+    export default {
+      name: 'ExperienceView',
+    
+    
+      data() {
+      return {
+        data: [],
+      };
+    },
+
+    computed: {
+    filteredData() {
+      return this.data.filter(item => item.typ ==='Projet');
+    },
   },
-  mounted() {
-    this.fetchData();
-  },
-  methods: {
-    fetchData() {
-      axios.get('http://localhost:8000/api/projet/')
-        .then(response => {
-          this.data = response.data;
-        })
-        .catch(error => {
-          console.error('Erreur lors de la requête API', error);
-        });
+
+    mounted() {
+      this.fetchData();
+      
+      this.$nextTick(() => {
+        // Code à exécuter après que le rendu du composant est terminé
+        this.effacerDiv();
+      });
+    },
+    methods: {
+      fetchData() {
+        axios.get('http://localhost:8000/api/experience/')
+          .then(response => {
+            this.data = response.data;
+          })
+          .catch(error => {
+            console.error('Erreur lors de la requête API', error);
+          });
+      },
+  
+      getYear(date) {
+        return new Date(date).getFullYear();
+      },
+  
+      effacerDiv() {
+        let divAEffacer = document.getElementById('eff');
+  
+      
+        if (divAEffacer) {
+          divAEffacer.parentNode.removeChild(divAEffacer);
+        }
+      },
+  
     }
-  }
-  
-  }
-  </script>
-  
-  <!-- Add "scoped" attribute to limit CSS to this component only -->
-  <style scoped>
-  
-  </style>
-  
+    
+    }
+    </script>
+    
+    <!-- Add "scoped" attribute to limit CSS to this component only -->
+    <style scoped>
+    
+    </style>
+    

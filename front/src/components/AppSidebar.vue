@@ -33,7 +33,7 @@ import InfoCom from './InfoCom.vue';
     data() {
         return {
             // Définir le chemin de l'image en fonction de l'emplacement dans votre projet
-            imagePath: require('@/assets/noir.png'),
+            imagePath: require('@/assets/noir.jpg'),
             name: 'AppSidebar', // Définir le nom par défaut
         };
     },

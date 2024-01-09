@@ -195,3 +195,16 @@ export default {
   </script>
 </body>
 </html>
+
+
+
+///////////////
+
+ effacerDiv() {
+      let divAEffacer = document.getElementById('eff');
+
+    
+      if (divAEffacer) {
+        divAEffacer.parentNode.removeChild(divAEffacer);
+      }
+    },

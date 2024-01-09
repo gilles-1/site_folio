@@ -6,10 +6,10 @@
     <AppHeader>
     
         <li class="nav-item">
-          <router-link to="/" class="nav-link">Competence</router-link>
+          <router-link to="/" class="nav-link">Compétence</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/experience" class="nav-link">Experience</router-link>
+          <router-link to="/experience" class="nav-link">Expérience</router-link>
         </li>
         <li class="nav-item">
           <router-link to="/formation" class="nav-link">Formation</router-link>
@@ -24,7 +24,7 @@
           <router-link to="/implication" class="nav-link">Implication</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/about" class="nav-link">About</router-link>
+          <router-link to="/about" class="nav-link">A propos</router-link>
         </li>
         <li class="nav-item">
           

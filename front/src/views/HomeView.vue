@@ -5,7 +5,7 @@
     
     <div class="card">
     <div class="card-header">
-      <p>Competences</p>
+      <p>Compétences</p>
   </div>
 
   <div class="card-body bg-dark bg-opacity-10" >
