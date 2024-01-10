@@ -68,7 +68,7 @@ class Experience(models.Model):
     started_at = models.fields.DateField()
     ended_at = models.fields.DateField()
     def __str__(self):
-        return f'{self.institution}'
+        return f'{self.title}'
 
 class Task(models.Model):
 

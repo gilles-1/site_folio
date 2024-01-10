@@ -151,3 +151,12 @@ fas fa-feed fa-3x
 <i class="fa fa-info-circle" aria-hidden="true"></i>
 
 https://fontawesome.com/v4/icon/info-circle
+
+https://www.youtube.com/watch?v=SXB6KJ4u5vg&list=PL8SZiccjllt1jz9DsD4MPYbbiGOR_FYHu       Docker
+https://xavki.blog/docker-tutoriaux-francais/
+https://www.youtube.com/watch?v=DAdkYZjEtrw&list=PLy8DguObsSuaCa_D5vk-IaZdwueLcxvjs        Docker Bon
+https://www.youtube.com/watch?v=GVogBCqrXck&list=PLn6POgpklwWq0iz59-px2z-qjDdZKEvWd        Docker A a Z Bon
+https://www.youtube.com/watch?v=8LciBx9uGCA&list=PLlxQJeQRaKDRC_TTW7E0Dz9xZWoxxzH3M
+
+
+https://xavki.blog/docker-tutoriaux-francais/
