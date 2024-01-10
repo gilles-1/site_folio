@@ -1,7 +1,7 @@
 <template>
 <div class="card">
     <div class="card-header">
-      <p>Expérience professionnelle</p>
+      <h6>Expérience professionnelle</h6>
   </div>
 
   <div class="card-body bg-dark bg-opacity-10" >

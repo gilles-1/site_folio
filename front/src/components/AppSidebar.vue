@@ -1,5 +1,5 @@
 <template>
-   <div >
+   <div style="text-align: center;">
 
     <!-- Carte Bootstrap avec Image d'Arrière-plan -->
 <div class="card">
@@ -22,7 +22,7 @@
     <a href="https://www.linkedin.com/in/giltrand" class="btn btn-outline-dark m-1" target="_blank"><i class="fab fa-linkedin"></i></a>
   </div>
 </div>
-
+<a href="/cv.pdf">Télécharger CV <i class="fas fa-file-pdf"></i></a>
    </div>
     </template>
     

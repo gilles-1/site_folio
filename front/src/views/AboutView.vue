@@ -1,7 +1,7 @@
 <template>
   <div class="card">
   <div class="card-header">
-      <p>À propos</p>
+      <h6>À propos</h6>
   </div>
 
   <div class="card-body" style="text-align: justify;">

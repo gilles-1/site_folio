@@ -150,6 +150,8 @@ fas fa-feed fa-3x
 
 <i class="fa fa-info-circle" aria-hidden="true"></i>
 
+<i class="fa-light fa-file-pdf"></i>
+
 https://fontawesome.com/v4/icon/info-circle
 
 https://www.youtube.com/watch?v=SXB6KJ4u5vg&list=PL8SZiccjllt1jz9DsD4MPYbbiGOR_FYHu       Docker

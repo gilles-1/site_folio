@@ -12,9 +12,9 @@ class UserProfile(models.Model):
     telephone = models.fields.CharField(max_length=200)
     city = models.fields.CharField(max_length=200)
     country = models.fields.CharField(max_length=200)
-    image = models.ImageField(upload_to='profile_images/', blank=True, null=True)
+    image = models.ImageField(upload_to='front/src/assets/', blank=True, null=True)
     adresse = models.CharField(max_length=255, blank=True, null=True)
-    cv = models.FileField(upload_to='cv/', blank=True, null=True)
+    cv = models.FileField(upload_to='front/public/', blank=True, null=True)
 
     def __str__(self):
         return f'{self.name}'

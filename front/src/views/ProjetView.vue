@@ -1,7 +1,7 @@
 <template>
   <div class="card">
       <div class="card-header">
-        <p>Projets</p>
+        <h6>Projets</h6>
     </div>
   
     <div class="card-body bg-dark bg-opacity-10" >
@@ -65,9 +65,17 @@
     },
 
     computed: {
-    filteredData() {
-      return this.data.filter(item => item.typ ==='Projet');
+      sortedItems() {
+      // Utilisez la méthode sort avec une fonction de comparaison pour trier par date
+      return this.data.slice().sort((a, b) => {
+        return new Date(b.started_at) - new Date(a.started_at);
+      });
     },
+
+    filteredData() {
+      return this.sortedItems.filter(item => item.typ ==='Projet');
+    },
+
   },
 
     mounted() {

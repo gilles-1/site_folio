@@ -3,7 +3,7 @@
       
       <div class="container">
         <a class="navbar-brand text-uppercase fw-bold" href="#">
-          <span class="bg-dark bg-gradient p-1 rounded-3 text-light">Ngan</span> gue
+          <span class="bg-dark bg-gradient p-1 rounded-3 text-light bg-opacity-50">Ngan</span><span class="bg-success bg-gradient p-1 rounded-3 text-dark bg-opacity-10">gue</span> 
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
