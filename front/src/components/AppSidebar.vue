@@ -18,7 +18,7 @@
     <!-- Liens d'icônes vers les réseaux sociaux et LinkedIn -->
     <a href="#" class="btn btn-outline-primary m-1"><i class="fab fa-facebook"></i></a>
     <a href="#" class="btn btn-outline-secondary m-1"><i class="fab fa-twitter"></i></a>
-    <a href="#" class="btn btn-outline-info m-1"><i class="fab fa-instagram"></i></a>
+    <a href="https://github.com/gilles-1/" class="btn btn-outline-info m-1"><i class="fab fa-github"></i></a>
     <a href="https://www.linkedin.com/in/giltrand" class="btn btn-outline-dark m-1" target="_blank"><i class="fab fa-linkedin"></i></a>
   </div>
 </div>
