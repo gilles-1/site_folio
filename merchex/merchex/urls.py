@@ -38,5 +38,5 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('api/', include(router.urls)),
     #path('sil', SkillWithItemListView.as_view(), name='sil'),
-    path('', views.index),
+    #path('', views.index),
 ]

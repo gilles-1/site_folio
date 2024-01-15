@@ -174,3 +174,12 @@ https://gist.github.com/Jeiwan/933aa3863a6d83e0d1cf50a48520ea17
 https://000046.awsstudygroup.com/4-deploy-yourimage/4.3-install-docker/
 
 André Brahic, astrophysicien
+
+docker tag local-image:tagname new-repo:tagname
+docker push new-repo:tagname
+
+https://kinsta.com/fr/base-de-connaissances/installer-nginx/
+
+
+docker build -t folio-vue .  
+docker run -p 8080:8080 --name folio-vue-cont folio-vue
