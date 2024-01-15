@@ -162,3 +162,15 @@ https://www.youtube.com/watch?v=8LciBx9uGCA&list=PLlxQJeQRaKDRC_TTW7E0Dz9xZWoxxz
 
 
 https://xavki.blog/docker-tutoriaux-francais/
+
+https://aws.amazon.com/fr/
+
+https://000046.awsstudygroup.com/4-deploy-yourimage/4.3-install-docker/
+https://coreyscorner.medium.com/installing-docker-on-aws-lightsail-linux-ubuntu-ddb2e00be1af
+https://davekz.com/docker-on-lightsail/
+
+https://gist.github.com/Jeiwan/933aa3863a6d83e0d1cf50a48520ea17
+
+https://000046.awsstudygroup.com/4-deploy-yourimage/4.3-install-docker/
+
+André Brahic, astrophysicien

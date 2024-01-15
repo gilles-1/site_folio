@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'folio',
     'rest_framework',
+    'django_cleanup.apps.CleanupConfig',
     'corsheaders'
 ]
 

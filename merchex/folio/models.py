@@ -16,6 +16,14 @@ class UserProfile(models.Model):
     adresse = models.CharField(max_length=255, blank=True, null=True)
     cv = models.FileField(upload_to='front/public/', blank=True, null=True)
 
+    @property
+    def cleaned_file_path(self):
+        return self.cv.cleaned_file_path if self.cv else None
+    
+    @property
+    def cleaned_image_path(self):
+        return self.image.cleaned_file_path if self.image else None
+
     def __str__(self):
         return f'{self.name}'
 
