@@ -179,7 +179,37 @@ docker tag local-image:tagname new-repo:tagname
 docker push new-repo:tagname
 
 https://kinsta.com/fr/base-de-connaissances/installer-nginx/
+https://www.appsyoda.com/blog/deploying-vuejs-app-using-nginx/
+https://www.appsyoda.com/blog/deploying-vuejs-app-using-nginx/                    BON
 
 
 docker build -t folio-vue .  
 docker run -p 8080:8080 --name folio-vue-cont folio-vue
+
+https://lightsail.aws.amazon.com/ls/docs/fr_fr/articles/amazon-lightsail-connecting-to-linux-unix-instance-using-sftp
+https://docs.aws.amazon.com/fr_fr/lightsail/latest/userguide/amazon-lightsail-connecting-to-linux-unix-instance-using-sftp.html
+https://repost.aws/fr/knowledge-center/lightsail-set-up-ftp
+
+https://thucnc.medium.com/deploy-a-vuejs-web-app-with-nginx-on-ubuntu-18-04-f93860219030
+
+https://migueldavid.eu/how-to-setup-a-django-backend-and-vue-js-frontend-in-aws-ecs-with-gitlab-1bdbdafd4b72
+
+https://dev.to/koladev/deploy-a-django-app-on-aws-lightsail-docker-docker-compose-postgresql-nginx-github-actions-bo6
+
+https://dev.to/koladev/deploy-a-django-app-on-aws-lightsail-docker-docker-compose-postgresql-nginx-github-actions-bo6
+
+https://thucnc.medium.com/deploy-a-vuejs-web-app-with-nginx-on-ubuntu-18-04-f93860219030
+
+https://medium.com/@netmowau/how-to-connect-aws-lightsail-ftp-with-filezilla-b943b800a8f7
+https://medium.com/@ayrusreev/connecting-aws-ec2-lightsail-with-filezilla-ubuntu-1db5d630a90a
+
+
+Associé
+Est-ce qu'il faut développer son propre backend quand on utilise le framework JavaScript Vue.js ?
+Tout dépend de ce qu'on entend par backend, mais il existe des frameworks pour la partie serveur web dédiés à Vue.js, comme Nuxt.js par exemple.
+
+https://mickael-baron.fr/web/vuejs-deploiement-part3
+
+https://mbaron.developpez.com/tutoriels/vuejs/developper-application-web-vuejs-vuecli-deploiement/
+
+https://www.appsyoda.com/blog/deploying-vuejs-app-using-nginx/
