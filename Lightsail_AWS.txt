@@ -1,21 +1,21 @@
-Deploiement dans Lightsil AWS
+Deploiement dans Lightsil AWS ********************
 
 git clone https://github.com/gilles-1/site_folio.git
 
-Ajouter un utilisateur gilles 
+Ajouter un utilisateur gilles  *********************
 
 adduser gilles
 
-Ajourer un utilisateur gilles au groue sudo 
+Ajourer un utilisateur gilles au groue sudo ****************
 
 gpasswd -a gilles sudo
 
-Installation de python
+Installation de python *******************
 
 sudo apt-get update
 sudo apt-get install python3-pip python3-dev libpq-dev
 
-Environnement virtuel et dépendances
+Environnement virtuel et dépendances ****************
 
 sudo apt install virtualenv
  virtualenv env -p python3
@@ -23,19 +23,22 @@ sudo apt install virtualenv
  
 pip install -r requirements.txt
 
-Génération des fichiers statiques
+Génération des fichiers statiques *********************
 
 mkdir -p /home/ubuntu/site_folio/merchex/merchex/static
 export ENV=PRODUCTION
 python manage.py collectstatic
 
-Attribution des doits au dossier parent du dossier du site et a tous ses sous dossier
+Attribution des doits au dossier parent du dossier du site et a tous ses sous dossier *****************
 
 sudo chmod 755 /home/ubuntu/
 sudo chown -R www-data:www-data /home/ubuntu/
 
+sudo chmod 777 /home/ubuntu/site_folio/merchex/db.sqlite3                 Mettre les droits d'ecritures sur le fichier de la bd
+sudo chmod 777 /home/ubuntu/site_folio/merchex/
 
-Installation et configuration de nginx
+
+Installation et configuration de nginx ************************
 
 sudo apt-get install nginx
 
@@ -45,6 +48,8 @@ sudo touch sites-available/site_folio
 sudo ln -s /etc/nginx/sites-available/site_folio /etc/nginx/sites-enabled
 
 sudo tail -f /var/log/nginx/error.log
+
+cd /etc/nginx
 
 sudo nano sites-available/site_folio
 
@@ -70,3 +75,12 @@ server {
 }
 
 sudo service nginx reload
+
+Installation est configuration de gunicorn
+
+gunicorn merchex.wsgi:application
+
+sudo lsof -i :8000                         sudo kill -9 PID             sudo tail -f /var/log/nginx/error.log
+
+
+Configuration de git 
