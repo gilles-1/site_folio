@@ -46,14 +46,16 @@ sudo ln -s /etc/nginx/sites-available/site_folio /etc/nginx/sites-enabled
 
 sudo tail -f /var/log/nginx/error.log
 
+sudo nano sites-available/site_folio
+
 server {
     # ...
 	
-	listen 80; server_name 178.62.117.192; 
-    root /home/celinems/disquaire/;
+	listen 80; server_name 3.99.177.244; 
+    root /home/ubuntu/site_folio/;
 
     location /static {
-        alias /home/celinems/disquaire/disquaire_project/staticfiles/;
+        alias /home/ubuntu/site_folio/merchex/merchex/staticfiles;
     }
 
     location / {
@@ -66,3 +68,5 @@ server {
         }
     }
 }
+
+sudo service nginx reload
