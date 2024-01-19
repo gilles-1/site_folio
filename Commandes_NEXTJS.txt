@@ -6,6 +6,7 @@ WSGI_APPLICATION = 'merchex.wsgi.application'
  gunicorn -b 127.0.0.1:8081 merchex.wsgi:application
  sudo service nginx reload
 python manage.py runserver
+sudo lsof -i :8080                         sudo kill -9 PID             sudo tail -f /var/log/nginx/error.log
 npm install bootstrap
 npm install -g @vue/cli
 vue create front
@@ -21,7 +22,13 @@ git status
 git commit -m "Ajout de fichier"
  git remote add fo https://github.com/gilles-1/folio.git
  git remote add tng https://github.com/gilles-1/site_folio.git
+ git remote add tng2 https://github.com/gilles-1/site_folio.git
  git push -u tng main
+ 
+https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-20-04-fr
+
+sudo chmod 755 /home/ubuntu/
+sudo chown -R www-data:www-data /home/ubuntu/site_folio/merchex/staticfiles/
  
 ~/projects/django-web-app
 → python -m venv env
