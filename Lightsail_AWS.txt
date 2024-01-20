@@ -1,3 +1,10 @@
+Creation des cles publics et privees avec Puttygen ***************************
+
+Creation de notre Droplet su Digital Ocean ************************
+
+Connexion a notre Droplet ubuntu via SSH
+
+
 Deploiement dans Lightsil AWS ********************
 
 git clone https://github.com/gilles-1/site_folio.git
@@ -10,6 +17,8 @@ Ajourer un utilisateur gilles au groue sudo ****************
 
 gpasswd -a gilles sudo
 
+su - gilles
+
 Installation de python *******************
 
 sudo apt-get update
@@ -18,14 +27,16 @@ sudo apt-get install python3-pip python3-dev libpq-dev
 Environnement virtuel et dépendances ****************
 
 sudo apt install virtualenv
- virtualenv env -p python3
+ sudo virtualenv env -p python3
  source env/bin/activate
+ 
+ chmod -R +w /home/gilles/.cache/pip
  
 pip install -r requirements.txt
 
 Génération des fichiers statiques *********************
 
-mkdir -p /home/ubuntu/site_folio/merchex/merchex/static
+mkdir -p /home/gilles/site_folio/merchex/merchex/static
 export ENV=PRODUCTION
 python manage.py collectstatic
 
@@ -34,8 +45,19 @@ Attribution des doits au dossier parent du dossier du site et a tous ses sous do
 sudo chmod 755 /home/ubuntu/
 sudo chown -R www-data:www-data /home/ubuntu/
 
+sudo chmod 755 /home/gilles/
+sudo chmod 777 /home/gilles/site_folio/env/
+sudo chown -R www-data:www-data /home/gilles/site_folio/env/
+sudo chown -R gilles:sudo /home/gilles/site_folio/env/
+sudo chown -R www-data:www-data /home/gilles/
+
 sudo chmod 777 /home/ubuntu/site_folio/merchex/db.sqlite3                 Mettre les droits d'ecritures sur le fichier de la bd
 sudo chmod 777 /home/ubuntu/site_folio/merchex/
+
+sudo chmod 777 /home/gilles/site_folio/merchex/db.sqlite3
+sudo chmod 777 /home/gilles/site_folio/merchex/
+
+modification de seeting.py en mettant lle nom de domaine a Allowed HOST
 
 
 Installation et configuration de nginx ************************
@@ -45,7 +67,7 @@ sudo apt-get install nginx
 cd /etc/nginx
 
 sudo touch sites-available/site_folio
-sudo ln -s /etc/nginx/sites-available/site_folio /etc/nginx/sites-enabled
+sudo ln -s /etc/nginx/sites-available/site_folio /etc/nginx/sites-enabled/site_folio
 
 sudo tail -f /var/log/nginx/error.log
 
@@ -56,11 +78,11 @@ sudo nano sites-available/site_folio
 server {
     # ...
 	
-	listen 80; server_name 3.99.177.244; 
-    root /home/ubuntu/site_folio/;
+	listen 80; server_name admin.ngangue.ca; 
+    root /home/gilles/site_folio/;
 
     location /static {
-        alias /home/ubuntu/site_folio/merchex/merchex/staticfiles;
+        alias /home/gilles/site_folio/merchex/merchex/staticfiles;
     }
 
     location / {
@@ -94,23 +116,25 @@ sudo nano /etc/supervisor/conf.d/site_folio-gunicorn.conf
 
 Ajouter a l'interieur du fichier la commande : 
 
-command=/home/ubuntu/site_folio/env/bin/gunicorn merchex.wsgi:application
-directory = /home/ubuntu/site_folio
-autostart = true
-autorestart = true
+[program:site_folio-gunicorn]
+command=/home/gilles/site_folio/env/bin/gunicorn merchex.wsgi:application
+directory=/home/gilles/site_folio/merchex
+user=gilles
+autostart=true
+autorestart=true
+stderr_logfile=/var/log/supervisor/site_folio-gunicorn.err.log
+stdout_logfile=/var/log/supervisor/site_folio-gunicorn.out.log
 
-$ sudo supervisorctl reread
-disquaire-gunicorn: available
-$ sudo supervisorctl update
-disquaire-gunicorn: added process group
+sudo supervisorctl reread
+sudo supervisorctl update
+sudo supervisorctl restart all
 
-$ sudo supervisorctl status
-disquaire-gunicorn               RUNNING   pid 16309, uptime 0:00:09
+sudo supervisorctl status          RUNNING   pid 16309, uptime 0:00:09
 
 
 Deploiement de la partie Frontend Vue.js
 
-sudo apt install nodejs npm
+sudo apt-get install nodejs npm
 
 sudo chown -R www-data:www-data /home/ubuntu/site_folio/merchex/front
 chmod -R 777 /home/ubuntu/site_folio/merchex/front
