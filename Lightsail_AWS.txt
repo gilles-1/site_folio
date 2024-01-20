@@ -1,6 +1,8 @@
 Creation des cles publics et privees avec Puttygen ***************************
 
-Creation de notre Droplet su Digital Ocean ************************
+Creation de notre Droplet su Digital Ocean et creation du Firewall ************************
+
+Creation du nom de domain sur goddady.com
 
 Connexion a notre Droplet ubuntu via SSH
 
@@ -139,8 +141,8 @@ sudo apt-get install nodejs npm
 sudo chown -R www-data:www-data /home/ubuntu/site_folio/merchex/front
 chmod -R 777 /home/ubuntu/site_folio/merchex/front
 
-sudo find /home/ubuntu/site_folio/merchex/front -type d -exec chmod 755 {} \;
-sudo find /home/ubuntu/site_folio/merchex/front -type f -exec chmod 644 {} \;
+sudo find /home/gilles/site_folio/merchex/front -type d -exec chmod 755 {} \;
+sudo find /home/gilles/site_folio/merchex/front -type f -exec chmod 644 {} \;
 
 sudo npm install
 
@@ -152,13 +154,13 @@ FICHIER A COLLER
 
 server {
 
-listen80;
+listen 80;
 
-server_name 3.99.177.244;
+server_name www.ngangue.ca;
 
 charset utf-8;
 
-root    /home/ubuntu/site_folio/merchex/front/dist;
+root    /home/gilles/site_folio/merchex/front/dist;
 
 index   index.html index.htm;
 
@@ -166,7 +168,7 @@ index   index.html index.htm;
 
 location / {
 
-root /home/ubuntu/site_folio/merchex/front/dist;
+root /home/gilles/site_folio/merchex/front/dist;
 
 try_files $uri /index.html;
 
@@ -185,8 +187,7 @@ sudo service nginx restart
 
 Acceder a 3.99.177.244
 
-sudo tail -n 50 /var/log/nginx/error.log
-sudo service nginx reload
+sudo tail -n 50 /var/l
 
 ls -l /home/ubuntu/site_folio/merchex/front/public/favicon.ico
 
@@ -206,7 +207,18 @@ sudo mkdir -p ~/snap
 sudo chown -R ubuntu:sudo ~/snap
 sudo npm run build
 
-sudo chmod -R 755 /home/ubuntu/site_folio/merchex/front/node_modules
+sudo chmod -R 755 /home/gilles/site_folio/merchex/front/node_modules
 sudo npm install
 reussi   **********
 
+
+sudo service nginx reload
+
+sudo supervisorctl reread
+sudo supervisorctl update
+sudo supervisorctl restart all
+sudo supervisorctl status
+
+https://blog.logrocket.com/how-to-build-vue-js-app-django-rest-framework/
+
+https://dev.to/huericnan/create-a-modern-application-with-django-and-vue-242j
