@@ -228,8 +228,30 @@ sudo snap install core; sudo snap refresh core
 
 sudo apt remove certbot
 
+sudo snap install --classic certbot
+
 
 
 https://blog.logrocket.com/how-to-build-vue-js-app-django-rest-framework/
 
 https://dev.to/huericnan/create-a-modern-application-with-django-and-vue-242j
+
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+
+Step 2 — Confirming Nginx’s Configuration
+sudo touch sites-available/site_folio
+sudo ln -s /etc/nginx/sites-available/site_folio /etc/nginx/sites-enabled/site_folio
+
+sudo nano /etc/nginx/sites-available/site_folio
+sudo nano /etc/nginx/sites-available/front
+
+sudo nginx -t
+sudo systemctl reload nginx
+
+Step 3 — Allowing HTTPS Through the Firewall
+
+sudo ufw status
+
+sudo ufw allow 'Nginx Full'
+
+sudo ufw delete allow 'Nginx HTTP'
