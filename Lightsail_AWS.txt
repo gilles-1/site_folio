@@ -255,3 +255,67 @@ sudo ufw status
 sudo ufw allow 'Nginx Full'
 
 sudo ufw delete allow 'Nginx HTTP'
+
+server {
+
+listen 443 ssl;
+
+server_name www.ngangue.ca admin.ngangue.ca;
+
+charset utf-8;
+
+root    /home/gilles/site_folio/merchex/front/dist;
+
+index   index.html index.htm;
+
+    # Always serve index.html for any request
+
+location / {
+
+root /home/gilles/site_folio/merchex/front/dist;
+
+try_files $uri /index.html;
+}
+
+error_log  /var/log/nginx/vue-app-error.log;
+
+access_log /var/log/nginx/vue-app-access.log;
+
+}
+
+
+
+
+server {
+        listen 80; server_name admin.ngangue.ca;
+    root /home/gilles/site_folio/;
+
+    location /static {
+        alias /home/gilles/site_folio/merchex/merchex/staticfiles;
+    }
+
+    location / {
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_redirect off;
+        if (!-f $request_filename) {
+            proxy_pass http://django;
+            break;
+        }
+    }
+}
+
+
+
+
+Step 4 — Obtaining an SSL Certificate
+
+sudo certbot --nginx -d www.ngangue.ca -d adminngangue.ca
+
+sudo systemctl status snap.certbot.renew.service
+
+sudo certbot renew --dry-run
+
+
+
+scp C:\Users\Admin\OneDrive\Document\cv.pdf root@178.128.238.139:/chemin/destination_sur_le_serveur/
