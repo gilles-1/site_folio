@@ -219,6 +219,17 @@ sudo supervisorctl update
 sudo supervisorctl restart all
 sudo supervisorctl status
 
+
+How To Secure Nginx with Let's Encrypt on Ubuntu 22.04  ***********************
+
+Step 1 — Installing Certbot
+
+sudo snap install core; sudo snap refresh core
+
+sudo apt remove certbot
+
+
+
 https://blog.logrocket.com/how-to-build-vue-js-app-django-rest-framework/
 
 https://dev.to/huericnan/create-a-modern-application-with-django-and-vue-242j
