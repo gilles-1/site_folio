@@ -316,6 +316,42 @@ sudo systemctl status snap.certbot.renew.service
 
 sudo certbot renew --dry-run
 
+https://admin.ngangue.ca/admin/
+
+sudo systemctl restart supervisor
 
 
-scp C:\Users\Admin\OneDrive\Document\cv.pdf root@178.128.238.139:/chemin/destination_sur_le_serveur/
+
+scp C:\Users\Admin\OneDrive\Document\cv.pdf root@178.128.238.139://home/gilles/site_folio/merchex/front/dist
+
+
+scp C:\Users\Admin\OneDrive\Document\cv.pdf root@178.128.238.139://home/gilles/site_folio/merchex/front/public
+
+sudo tail -f /var/log/nginx/error.log
+
+
+
+server {
+    if ($host = admin.ngangue.ca) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+        listen 443; server_name admin.ngangue.ca;
+    root /home/gilles/site_folio/;
+ssl_certificate /etc/letsencrypt/live/www.ngangue.ca/fullchain.pem; # man>
+    ssl_certificate_key /etc/letsencrypt/live/www.ngangue.ca/privkey.pem;
+    location /static {
+        alias /home/gilles/site_folio/merchex/merchex/staticfiles;
+    }
+
+    location / {
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+
+
+
+
+
+ps aux | grep gunicorn
